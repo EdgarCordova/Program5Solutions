@@ -28,11 +28,12 @@ namespace loopingoverthis
                 string currentSport = sportsList[i];
                 //check to see if its a sportwith the word 
                 //"ball" in it 
-                if (currentSport.Contains("ball"))
+                while (currentSport.Contains(" "))
                 {
-                    //its true
-                    Console.WriteLine(currentSport);
+                    Console.WriteLine(currentSport.Trim( new Char[] { ' ' } ));
                 }
+
+
             }
         }
          static void LoopOverWordsInAString(string inputString)
